@@ -10,6 +10,7 @@ import {
   AsyncStorage
 } from 'react-native';
 import styles from '../styles/formStyle';
+import { Link } from 'react-router-native';
 
 class Form extends Component {
   render() {
@@ -17,7 +18,7 @@ class Form extends Component {
       <View style={styles.container}>
 
         <TouchableHighlight style={styles.scanButton}>
-          <Text style={styles.scanText}>Scan Receipt</Text>
+          <Link to="/camera"><Text style={styles.scanText}>Scan Receipt</Text></Link>
         </TouchableHighlight>
         <Text style={styles.label}>Vendor</Text>
         <TextInput style={styles.input} name="vendor" />
