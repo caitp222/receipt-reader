@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
-import { TextInput,
+import {
+  TextInput,
   StyleSheet,
   TouchableHighlight,
   View,
@@ -8,7 +9,7 @@ import { TextInput,
   Text,
   AsyncStorage
 } from 'react-native';
-import styles from '../styles/formStyle'
+import styles from '../styles/formStyle';
 
 class Form extends Component {
   render() {
@@ -27,8 +28,8 @@ class Form extends Component {
           <Text style={styles.confirm}>Confirm Expense</Text>
         </TouchableHighlight>
       </View>
-        )
-      }
-    }
+    )
+  }
+}
 
 export default Form;
