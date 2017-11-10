@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
-import { TextInput,
+import {
+  TextInput,
   StyleSheet,
   TouchableHighlight,
   View,
@@ -8,12 +9,15 @@ import { TextInput,
   Text,
   AsyncStorage
 } from 'react-native';
-import styles from '../styles/formStyle'
+import styles from '../styles/formStyle';
 
 class Form extends Component {
   render() {
     return(
       <View style={styles.container}>
+        <TouchableHighlight style={styles.scanButton}>
+          <Text style={styles.scanText}>Scan Receipt</Text>
+        </TouchableHighlight>
         <Text style={styles.label}>Vendor</Text>
         <TextInput style={styles.input} name="vendor" />
         <Text style={styles.label}>Description</Text>
@@ -24,8 +28,8 @@ class Form extends Component {
           <Text style={styles.confirm}>Confirm Expense</Text>
         </TouchableHighlight>
       </View>
-        )
-      }
-    }
+    )
+  }
+}
 
 export default Form;
