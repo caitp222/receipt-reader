@@ -27,4 +27,4 @@ class CameraAccess extends Component {
   }
 }
 
-export default CameraAccess ;
+export default CameraAccess;

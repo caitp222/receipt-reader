@@ -1,24 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-// my components
-import Form from './components/form.js'
+import Form from './components/form';
+import Camera from './components/camera'
+import styles from './styles/appStyle';
+import { NativeRouter, Route, Link } from 'react-router-native';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Form />
-      </View>
+      <NativeRouter>
+        <View style={styles.container}>
+          <Route exact path="/" component={Form}/>
+          <Route exact path="/camera" component={Camera}/>
+        </View>
+      </NativeRouter>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
