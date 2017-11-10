@@ -14,6 +14,9 @@ class Form extends Component {
   render() {
     return(
       <View style={styles.container}>
+        <TouchableHighlight style={styles.scanButton}>
+          <Text style={styles.scanText}>Scan Receipt</Text>
+        </TouchableHighlight>
         <Text style={styles.label}>Vendor</Text>
         <TextInput style={styles.input} name="vendor" />
         <Text style={styles.label}>Description</Text>
